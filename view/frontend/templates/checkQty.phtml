@@ -1,0 +1,20 @@
+<div data-bind="scope:'custom-knockout'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+{
+  "*": {
+    "Magento_Ui/js/core/app": {
+      "components": {
+        "custom-knockout": {
+          "component": "Learn_ProductQuantity/js/custom",
+          "template": "Learn_ProductQuantity/custom",
+          "config": {
+            "id": "<?= $block->getProduct()->getId(); ?>"
+          }
+        }
+      }
+    }
+  }
+}
+</script>
